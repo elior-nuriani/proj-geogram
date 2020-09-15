@@ -1,0 +1,114 @@
+.drawer-container{
+    font-family: ubu-reg,nunito-reg,sans-serif;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: var(--base-width-drawer);
+    min-width: var(--base-width-drawer);
+    height: 100vh;
+    background-color: var(--color-primary);
+    padding: 20p;
+    @include padding-tb-base;
+    .logo-box{
+        .logo-title{
+            font-family: pacifo-reg, Helvetica, sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+    & > *{
+        width: 100%;
+        @include padding-rl-base;
+    }
+    .drawer-profile-info{
+
+        @include padding-tb-base;
+        & > *{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            &.profile-name-box{
+                margin-bottom: 30px;
+            }
+        }
+
+
+        .profile-img{
+            width: 85px;
+            height: 85px;
+            border-radius: 200px;
+            background-image: linear-gradient(to right top, #e23769, #e8325d, #ec2e4f, #ee2e40, #ef3030, #f04029, #f14e22, #f15a1a, #f36e22, #f5812d, #f7923a, #f9a249);
+            .img-wrapper{
+                width: 97%;
+                height: 95%;
+                border-radius: 200px;
+                background-color: var(--color-primary);
+                .img{
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    width: 88%;
+                    height: 88%;
+                    border-radius: 200px;
+                }
+            }
+        }
+        .profile-fullName{
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+    }
+    .drawer-navbar{
+        flex-grow: 1;
+        padding-right: 0px;
+        & > *{
+            width: 100%;
+        }
+        svg{
+            width: 20px;
+        }
+        span.link-box{
+            width: 100%;
+            cursor: pointer;
+            &:not(:last-child){
+                margin-bottom: 25px;
+            }
+            cursor: pointer;
+            .icon{
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.705);
+            }
+            a, .logout-btn{
+                margin: 0px;
+                margin-left: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                width: 100%;
+                padding-top:5px;
+                padding-bottom: 5px;
+            }
+        }
+        a.active{
+            border-right: 2px solid var(--color-feature-base-border);
+        }
+        .btn-add-post{
+            align-self: center;
+            font-size: 0.8rem;
+            padding: 8px 15px;
+            border-radius: 0px;
+            span{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:750px){
+    .drawer-container{
+        display: none;
+    }
+}

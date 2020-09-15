@@ -1,0 +1,60 @@
+//App Top Header 
+
+
+//Mobile Display Only
+.app-top-header-container{
+    background-color: white;
+    width: 100%;
+    padding: 4px 15px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+    h2.geogram-logo{
+        font-size: 20px;
+        font-family: pacifo-reg ,Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        letter-spacing: 2.2px;
+        span{
+            margin-left: 5px;
+            color: var(--color-second);
+        }
+    }
+    .unread-msgs-icon-float{
+        right: -10px;
+        top:-10px;
+    }
+}
+
+.app-bottom-header-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0px 15px;
+    z-index:9999;
+    width: 100%;
+    background-color: white;
+    .add-post{
+        font-size: 24px;
+        color: var(--color-second);
+    }
+    .logged-in-user-link{
+        width: 25px;
+        height: 25px;
+        border-radius: 200px;
+        @include image-default;
+    }
+    .chat-arrow{
+        color: var(--color-second);
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width:750px){
+    .app-top-header-container, .app-bottom-header-container{
+        display: flex;
+    }
+}

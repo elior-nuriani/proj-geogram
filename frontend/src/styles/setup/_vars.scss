@@ -1,0 +1,28 @@
+:root {
+    
+    //Base Vars
+    --color-body-layout:white; 
+    --color-primary: rgb(240, 248, 255);
+    --color-second: rgb(242,128,84);
+    
+    //Features
+    --color-feature-text: rgba(0, 0, 0, 0.356);
+    --color-feature-highlight: #27db69;
+    --color-feature-base-border: rgb(227,65,117);
+
+    //Linear-gradient with the basic APP colors
+    --background-image-base : linear-gradient(to right, #e43c66, #e84862, #ec545e, #ee605a, #f06b58, #f27356, #f47c54, #f58452, #f88d4f, #fa964c, #fb9f49, #fba847);
+
+    //Image Layers
+    --image-layer-primary:rgba(0, 0, 0, 0.253); 
+    --image-layer-second:rgba(0, 0, 0, 0.26); 
+
+    --image-layer-primary-login:rgba(0, 0, 0, 0.541); 
+    --image-layer-second-login:rgba(0, 0, 0, 0.562); 
+
+    //Colors Base Cmps
+    --color-post-preview-border: rgb(214, 214, 214); 
+    --base-width-drawer: 300px; 
+    --color-map : rgb(2,16,25); 
+    --color-chat-primary: rgb(170, 215, 255); 
+}

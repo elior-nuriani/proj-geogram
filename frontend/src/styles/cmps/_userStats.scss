@@ -1,0 +1,23 @@
+.profile-userName, .profile-info-box{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.profile-info-box > * >*:last-child, .profile-userName{
+    color:var(--color-feature-text);
+    font-size: 0.7rem;
+}
+.profile-info-box{
+    font-size: 0.8rem;
+    font-weight: 600;
+    & > *{
+        flex-basis:33%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:not(:last-child){
+            border-right: 1px solid rgb(235, 235, 235);
+        }
+        span:first-child{
+            margin-bottom: 5px;
+        }
+    }
+}

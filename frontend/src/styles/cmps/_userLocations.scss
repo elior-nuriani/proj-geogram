@@ -1,0 +1,12 @@
+.map-info-section{
+    padding:0ppx 0px 10px 0px;
+    height: 25vh;
+    width: 100%;
+    z-index: 10;
+    .map-list-container{
+        flex: 1;
+        height: 100%;
+        //The rest in _mapList.scss 
+    }    
+}
+

@@ -1,0 +1,61 @@
+.post-preview-feed-container{
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--color-post-preview-border);
+    font-size: 0.8rem;
+    & > *:not(.action-conatainer) {
+        padding: 10px 0px;
+    }
+    .action-container {
+        padding: 10px 0px 0px 0px ;
+    }
+    .creator-userName{
+        font-weight: bold;
+    }
+    
+    .icons-container{
+        
+        span:not(.location-arrow){
+            margin-right: 20px;
+        }
+        .location-arrow{
+            color: black;
+        }
+    }
+    .post-img{
+        @include image-default;
+    }
+    .likes-wrapper.userName-wrapper{
+        & > span:first-child{
+            margin-bottom: 5px;
+        }
+    }
+    .post-desc.post-comments{
+        font-family: nunito-med,ubu-med,sans-serif;
+        & > div:last-child{
+            color: var(--color-feature-text);
+        }
+    }
+    .add-comment{
+        input{
+            flex-grow: 1;
+            padding: 10px 0px;
+            font-weight: bolder;
+            border: none;
+        }
+    }
+}
+
+
+@media (max-width:950px){
+    .post-preview-feed-container{
+        width: 100%;
+    }
+}
+
+@media (max-width:750px){
+    .post-preview-feed-container{
+        border: none;
+        border-bottom:1px solid var(--color-post-preview-border);
+    }
+}

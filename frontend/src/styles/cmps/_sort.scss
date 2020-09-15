@@ -1,0 +1,14 @@
+.sort-container{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-feature-text);
+    .sortBy-active{
+        color: black;
+    }
+    & > div{
+        padding: 10px 0px;
+    }
+    & > div:first-child{
+        margin-right: 20px;
+    }
+}

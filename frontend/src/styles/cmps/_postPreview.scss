@@ -1,0 +1,42 @@
+.post-preview-container{
+    width: 100%;
+    .post-details{
+        font-size: 0.7rem;
+        font-weight: bolder;
+        
+        .post-main-details{
+            font-size: 0.8rem;
+            & >:first-child{
+                margin-right:15px;
+            }
+            span:first-child{
+                margin-right:8px;
+            }
+        }
+    }
+}
+
+@media (max-width:950px){
+    .post-preview-container{
+        .post-img{
+            border-radius: 0px;
+        }
+        .post-details{
+            padding: 0px 15px;
+        }
+    }
+}
+
+
+@media (max-width:750px){
+    .post-preview-container{
+        .post-details{
+            display: none;
+        }
+        //Base Preview Cmp
+        .img-content-wrapper{
+            display: none;
+        }
+    }
+}
+

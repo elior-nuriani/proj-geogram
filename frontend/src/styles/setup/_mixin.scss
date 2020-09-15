@@ -1,0 +1,54 @@
+// Reusable Code In CSS
+
+//aspect ratio mixin
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    > *:not(.img-content-wrapper) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }  
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
+}
+
+@mixin padding-rl-base {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@mixin padding-tb-base {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@mixin padding-top-base {
+    padding-top: 30px;
+}
+
+@mixin padding-bottom-base {
+  padding-bottom: 30px;
+}
+
+@mixin image-default {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+//Content Wrapper
+@mixin padding-rl-mobile-base{
+  padding-left: 15px;
+  padding-right: 15px;
+}

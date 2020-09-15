@@ -1,0 +1,28 @@
+.main-content-wrapper{
+    flex-grow: 1;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: auto;
+    width: auto;
+    @include padding-tb-base;
+    &.wide{
+        padding: 0px;
+    }
+
+}
+
+@media (max-width:950px){
+    .main-content-wrapper{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width:750px){
+    .App{
+        flex-direction: column;
+        .main-content-wrapper{
+            padding-top: 0px;
+        }
+    }
+}

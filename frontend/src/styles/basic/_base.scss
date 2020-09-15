@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: ubu-reg, nunito-reg, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--color-body-layout);
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+    font-family: rubik-reg,roboto-reg, Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+//Navlink Style
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-family: ubu-reg,nunito-reg,sans-serif;
+    margin: 10px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+button, .btn , .icon{
+    cursor: pointer;
+    font-family: nunito-reg, ubu-reg, sans-serif;
+}
+
+//Basic Cmps Style
+
+.creator-container{
+    padding: 10px 0px;
+    .creator-userName{
+        color: var(--color-second);
+    }
+}
+
+.post-user-img{
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 15px;
+    margin-right: 10px;
+    @include image-default
+}
+
+.follow-tag{
+    margin-left: 10px;
+    font-weight: bolder;
+    color: var(--color-feature-highlight);
+    cursor: pointer;
+}
+
+
+.post-img{
+    width: 100%;  
+    border-radius: 10px; 
+    position: relative;
+    @include image-default;
+    .img-content-wrapper{
+        width: 100%;
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.699);
+        .img-content{
+            width: 100%;
+            padding: 5px 0px 5px 10px;
+            font-size: 0.8rem;
+            font-family: nunito-reg,ubu-reg,sans-serif;
+            color:var(--color-primary);
+            span:first-child{
+                margin-right:20px;
+            }
+            span.where{
+                max-width: 80%;
+                height: 40px;
+                overflow: hidden;
+            }
+        }
+        .location-arrow{
+            height: 100%;
+            width: 50px;
+        }
+    }
+}
+
+
+.post-header{
+    width: 100%;
+    border-bottom: 2px solid var(--color-body-layout);
+    & > :first-child{
+        margin-left: 10px;
+    }
+    & > :last-child{
+        margin-right: 10px;
+    }
+    .post-info > div:first-child{
+        margin-bottom: 5px;
+    }
+
+    .post-user-img{
+        width: 40px;
+        height: 40px;
+    }
+    .post-where{
+        font-size: 0.7rem;
+        font-family: nunito-reg;
+    }
+}
+
+.view-profile{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    min-width: 90px;
+    border-radius:5px;
+    padding: 5px 8px;
+    background-color: var(--color-feature-highlight);
+}
+
+
+.icons-container{
+    font-size: 18px;
+    span{
+        cursor: pointer;
+    }
+    span:not(.location-arrow){
+        margin-right: 10px;
+    }
+}
+
+
+.action-container{
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+    border-top: 5px solid var(--color-body-layout) ;
+    & > *{
+        padding:5px 20px;
+        //Before Last Child
+        &:nth-last-child(2){
+            border-bottom: 2px solid var(--color-body-layout);
+        }
+    }
+    .likes-wrapper, .date-wrapper, .comment-input, .btn{
+        font-weight: bolder;
+    }
+    .date-wrapper{
+        font-size: 0.75rem;
+        color: var(--color-feature-text);
+    }
+    .input-wrapper{
+        width: 100%;
+        flex-grow: 1;
+        padding: 10px 5px;
+        form.input-container{
+            height: 100%; 
+            width: 100%;
+            & > *{
+                height: 100%;
+            }                
+              
+            input.comment-input, .input-comment-msg{
+               flex-grow: 1;
+               border: none;
+               background-color: var(--color-primary);
+               border-right: 1px solid #ebebeb;
+            }
+            
+            .btn-comment{
+                border:none;
+                background-color: rgba(255, 255, 255, 0);
+            }
+            
+        }
+    }
+
+}
+
+.info-window{
+    padding: 20px 10px;
+    .post-img{
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        @include image-default;
+        margin-right: 10px;
+    }
+    .post-info{
+        h2{
+            font-family: rubik-med, Helvetica, sans-serif;
+            margin-bottom: 10px;
+        }
+        p{
+            font-family: ubu-reg,nunito-reg,sans-serif;
+        }
+        .desc{
+            color:var(--color-feature-text);
+            font-style: italic;
+            margin:5px 0px
+        }
+        .where{
+            font-weight: bolder;
+            font-family: ubu-med,nunito-med,sans-serif;
+        }
+    }
+}
+
+.btn-follow , .btn-login, .btn-signup, .btn-share-post , .btn-goto-chats{
+    font-weight: bolder;
+    background-color: var(--color-feature-highlight);
+    color: white;
+    padding: 5px 30px ;
+    border-radius: 3px;
+}
+
+.btn-msg{
+    font-weight: bolder;
+    color: black;
+    border: 1px solid var(--color-feature-highlight);
+    padding: 5px 30px ;
+    border-radius: 3px;
+}
+
+    
+.search{
+    flex-grow: 1;
+    // font-weight: bolder;
+    padding: 8px 10px;
+    padding-left: 45px;
+    font-family:roboto-med,rubik-med, Helvetica, sans-serif;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--color-primary);
+}
+.search-icon{
+    // margin-right: 20px;
+    font-size: 12px;
+    left: 30px;
+    position: relative;
+}
+
+.btn-liked{
+    color: red;
+}
+
+.saved-location{
+    color: var(--color-feature-highlight);
+}
+
+.btn-comment{
+    background-color: white;
+    // border: 1px solid var(--color-feature-highlight);
+    border: none;
+    padding: 5px 10px;
+    color: var(--color-feature-highlight);
+    font-weight: bold;
+}
+
+.btn-add-post{
+    padding: 8px 15px;
+    background-image: var(--background-image-base );
+    border-radius: 10px;
+    color: white;
+    & > *:first-child{
+        margin-right: 10px;
+        padding: 2px;
+        background-color: rgb(238,125,137);
+        border-radius: 200px;
+    }
+}
+
+.msg-alert{
+    font-size: 1rem;
+    position: relative;
+    .unread-msgs-icon-float{
+        font-size: 0.5rem;
+        position: absolute;
+        background-color: var(--color-second);
+        color: white;
+        top: -15px;
+        right:-15px;
+        padding: 3px 5px;
+        border-radius: 200px;
+
+    }
+}
+
+//Profile Cmps
+
+.profile-default-msg{
+    font-family: nunito-med,ubu-med,sans-serif;
+    color: var(--color-feature-text);
+    text-align: center;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,27 @@
+.discover-container{
+    & > * {
+        width: 100%;
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width:950px){
+    .discover-container{
+        .discover-header{
+            @include padding-rl-mobile-base;
+        }
+    }
+}
+
+@media (max-width:750px){
+    .discover-container{
+        .discover-header{
+            margin:  10px 0px;
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}

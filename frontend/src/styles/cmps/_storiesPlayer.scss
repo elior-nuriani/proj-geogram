@@ -1,0 +1,180 @@
+.stories-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    visibility: hidden;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.938);
+    z-index: 9999;
+    margin-bottom: 0px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.open{
+        visibility: visible;
+        
+    }
+    .stories-wrapper {
+        width: 100vw;
+        height: 100vh;
+        perspective: 400px;
+        overflow: hidden;
+        .stories-list{
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transform: translateZ(-50vw);
+            .story{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                backface-visibility: hidden;
+                background-size: cover;
+                background-position: center;
+                display: none;
+                transition: all 0.4s ease-in-out;
+                &.video{
+                    video{
+                            /* Make video to at least 100% wide and tall */
+                            min-width: 100%;
+                            min-height: 100%;
+                        
+                            /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+                            width: 100%;
+                            // height: 100vh;
+                            object-fit: cover;
+                            /* Center the video */
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                    }
+                }
+                .left-side, .right-side{
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 33%;
+                }
+                .left-side{
+                    left: 0;
+                }
+                .right-side{
+                    right: 0;
+                }
+                &.current-story{
+                    display: block;
+                    will-change: transform;
+                    transform: rotateY(0deg) translateZ(50vw);
+                }
+                &.next-story{
+                    display: block;
+                    will-change: transform;
+                    transform: rotateY(90deg) translateZ(50vw);
+                }
+                &.prev-story{
+                    display: block;
+                    will-change: transform;
+                    transform: rotateY(-90deg) translateZ(50vw);
+                }
+            }
+        }
+    }
+}
+
+.story-top-container{
+    z-index: 10;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0));
+    padding: 0px 50px;
+    .story-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        border-radius: 50%;
+        @include image-default;
+    }
+    .story-user {
+        margin-right: 12px;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+    }
+    .story-txt {
+        text-align: center;
+        color: white;
+        opacity: 0.5;
+        letter-spacing: 0.02em;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 200px;
+        background-image: var(--background-image-base);
+    }
+    .story-exit{
+        color: white;
+        font-size:30px;
+        font-weight: 100;
+    }
+}
+
+.story-bottom-container {
+	z-index: 10;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    padding: 0px 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    .story-where{
+        div{
+            margin-left: 10px;
+        }
+    }
+    .story-likes{
+        font-size: 16px;
+        span{
+            margin-left: 10px;
+            color: var(--color-second);
+        }
+    }
+}
+
+@media (max-width:750px){
+    .story-top-container, .story-bottom-container{
+        padding: 0px 25px;
+    }
+    .story-top-container{
+        .story-user-info{
+            flex-direction: column;
+            .story-user{
+                margin: 0px;
+            }
+            .story-txt{
+                margin-top: 5px;
+                margin-bottom: -25px;
+            }
+        }
+        .story-user, .story-txt{
+            font-size: 12px;
+        }
+        .story-exit{
+            font-size: 20px;
+        }
+    }
+    .story-bottom-container{
+        font-size: 12px;
+        .story-likes{
+            font-size: 12px;
+        }
+    }
+}
