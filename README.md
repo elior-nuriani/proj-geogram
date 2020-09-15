@@ -5,3 +5,4 @@ Created with React & Redux,sockets, REST API with Node.Js (Express) and MongoDB 
 
 # Live page: https://geogram2020.herokuapp.com/#/
 Demo :  User Name - TravelOPunk , pass : rudy123
+        User Name - Johnny_Nicko1 , pass : john123
